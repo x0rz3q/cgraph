@@ -1,8 +1,4 @@
-image: gcc
-
-before_script:
-  - apt-get update -y
-  - apt-get -y install cmake googletest gtest
+image: "x0rz3q/gtest:latest"
 
 stages:
   - build
