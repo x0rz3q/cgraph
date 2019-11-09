@@ -93,5 +93,6 @@ TEST(GraphTest, FromOutOfBound) {
  */
 TEST(GraphTest, ToOutOfBound) {
     Graph *graph = init_graph(UNWEIGHTED, UNDIRECTED, 4);
+
     EXPECT_EQ(add_unweighted_edge(graph, 0, 4), GRAPH_ERR_TO_OUT_OF_BOUNDS);
 }
