@@ -20,8 +20,8 @@ int add_unweighted_edge(Graph *graph, unsigned int from, unsigned int to) {
 }
 
 int add_weighted_edge(Graph *graph, unsigned int from, unsigned int to, int weight) {
-    if (from >= graph->capacity) return 1;
-    if (to >= graph->capacity) return 2;
+    if (from >= graph->capacity) return GRAPH_ERR_FROM_OUT_OF_BOUNDS;
+    if (to >= graph->capacity) return GRAPH_ERR_TO_OUT_OF_BOUNDS;
 
     graph->adjacent[from][to] = weight;
 
@@ -29,7 +29,7 @@ int add_weighted_edge(Graph *graph, unsigned int from, unsigned int to, int weig
         graph->adjacent[to][from] = weight;
     }
 
-    return 0;
+    return GRAPH_SUCCESS;
 }
 
 int remove_edge(Graph *graph, unsigned int from, unsigned int to) {
@@ -44,5 +44,5 @@ int destroy_graph(Graph *graph) {
     free(graph->adjacent);
     free(graph);
 
-    return 0;
+    return GRAPH_SUCCESS;
 }

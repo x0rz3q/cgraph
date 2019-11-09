@@ -20,6 +20,10 @@ typedef struct Graph {
     unsigned int capacity;
 } Graph;
 
+#define GRAPH_ERR_FROM_OUT_OF_BOUNDS 1
+#define GRAPH_ERR_TO_OUT_OF_BOUNDS 2
+#define GRAPH_SUCCESS 0
+
 /**
  * Initialize an empty graph.
  * @param weight If the graph is unweighted or weighted.
@@ -34,9 +38,9 @@ Graph *init_graph(GraphWeight weight, GraphDirection direction, unsigned int cap
  * @param graph The graph.
  * @param from The source edge.
  * @param to The destination edge.
- * @return  "0" if the edge can be added.
- *          "1" if "from" is out of bounds.
- *          "2" if "to" is out of bounds.
+ * @return  GRAPH_SUCCESS if the edge can be added.
+ *          GRAPH_ERR_FROM_OUT_OF_BOUNDS if "from" is out of bounds.
+ *          GRAPH_ERR_TO_OUT_OF_BOUNDS if "to" is out of bounds.
  */
 int add_unweighted_edge(Graph *graph, unsigned int from, unsigned int to);
 
@@ -45,9 +49,9 @@ int add_unweighted_edge(Graph *graph, unsigned int from, unsigned int to);
  * @param graph The graph.
  * @param from The source edge.
  * @param to The destination edge.
- * @return  "0" if the edge is added.
- *          "1" if "from" is out of bounds.
- *          "2" if "to" is out of bounds.
+ * @return  GRAPH_SUCCESS if the edge is added.
+ *          GRAPH_ERR_FROM_OUT_OF_BOUNDS if "from" is out of bounds.
+ *          GRAPH_ERR_TO_OUT_OF_BOUNDS if "to" is out of bounds.
  */
 int add_weighted_edge(Graph *graph, unsigned int from, unsigned int to, int weight);
 
@@ -56,16 +60,16 @@ int add_weighted_edge(Graph *graph, unsigned int from, unsigned int to, int weig
  * @param graph The graph.
  * @param from The source edge.
  * @param to The destination edge.
- * @return  "0" if edge is removed.
- *          "1" if "from" is out of bounds.
- *          "2" if "to" is out of bounds.
+ * @return  GRAPH_SUCCESS if edge is removed.
+ *          GRAPH_ERR_FROM_OUT_OF_BOUNDS if "from" is out of bounds.
+ *          GRAPH_ERR_TO_OUT_OF_BOUNDS if "to" is out of bounds.
  */
 int remove_edge(Graph *graph, unsigned int from, unsigned int to);
 
 /**
  * Destroy and free the graph.
  * @param graph The graph.
- * @return 0 if graph got destroyed successfully.
+ * @return GRAPH_SUCCESS if graph got destroyed successfully.
  */
 int destroy_graph(Graph *graph);
 
