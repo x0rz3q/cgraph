@@ -1,5 +1,5 @@
-#ifndef CGRAPH_LIBRARY_H
-#define CGRAPH_LIBRARY_H
+#ifndef CGRAPH_LIBRARY_GRAPH_H
+#define CGRAPH_LIBRARY_GRAPH_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -73,4 +73,4 @@ int destroy_graph(Graph *graph);
 }
 #endif
 
-#endif //CGRAPH_LIBRARY_H
+#endif //CGRAPH_LIBRARY_GRAPH_H
