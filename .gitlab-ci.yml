@@ -1,0 +1,13 @@
+image: gcc
+stages:
+  - build
+before_script:
+  - apt-get update
+  - install -y libcunit1 libcunit1-doc libcunit1-dev
+build:
+  stage: build
+  script:
+    - make build
+    - cd build
+    - cmake ..
+    - make
