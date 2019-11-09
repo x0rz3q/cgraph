@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.13)
 project(cgraph C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_library(cgraph SHARED cgraph.c cgraph.h)
+add_library(cgraph SHARED src/cgraph.c src/cgraph.h)
