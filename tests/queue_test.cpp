@@ -40,9 +40,9 @@ TEST(QueueTest, QueuePop) {
         queue_push(queue, i);
     }
 
-    int* result = nullptr;
-    EXPECT_EQ(queue_pop(queue, result), QUEUE_SUCCESS);
-    EXPECT_EQ(*result, start_element);
+    int result = 0;
+    EXPECT_EQ(queue_pop(queue, &result), QUEUE_SUCCESS);
+    EXPECT_EQ(result, start_element);
 }
 
 /**
@@ -56,8 +56,8 @@ TEST(QueueTest, QueuePopEmpty) {
     }
 
     for (int i = 0; i < 10; i++) {
-        int *result = nullptr;
-        queue_pop(queue, result);
+        int result = 0;
+        queue_pop(queue, &result);
     }
 
     EXPECT_EQ(queue_empty(queue), QUEUE_EMPTY);

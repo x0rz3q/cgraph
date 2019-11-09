@@ -31,7 +31,7 @@ int queue_pop(Queue *queue, int *result) {
     if (queue_empty(queue) == QUEUE_EMPTY) return QUEUE_EMPTY;
 
     int element = queue->elements[queue->pointer];
-    result = &element;
+    *result = element;
 
     queue->elements[queue->pointer] = 0;
     --queue->size;
