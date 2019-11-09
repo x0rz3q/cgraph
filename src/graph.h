@@ -1,6 +1,11 @@
 #ifndef CGRAPH_LIBRARY_GRAPH_H
 #define CGRAPH_LIBRARY_GRAPH_H
 
+/* function return codes. */
+#define GRAPH_ERR_FROM_OUT_OF_BOUNDS 1
+#define GRAPH_ERR_TO_OUT_OF_BOUNDS 2
+#define GRAPH_SUCCESS 0
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -19,10 +24,6 @@ typedef struct Graph {
     GraphWeight weight;
     unsigned int capacity;
 } Graph;
-
-#define GRAPH_ERR_FROM_OUT_OF_BOUNDS 1
-#define GRAPH_ERR_TO_OUT_OF_BOUNDS 2
-#define GRAPH_SUCCESS 0
 
 /**
  * Initialize an empty graph.
