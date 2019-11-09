@@ -1,6 +1,10 @@
 #ifndef CGRAPH_LIBRARY_H
 #define CGRAPH_LIBRARY_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef enum {
     UNDIRECTED, DIRECTED
 } GraphDirection;
@@ -64,5 +68,9 @@ int remove_edge(Graph *graph, unsigned int from, unsigned int to);
  * @return 0 if graph got destroyed successfully.
  */
 int destroy_graph(Graph *graph);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //CGRAPH_LIBRARY_H

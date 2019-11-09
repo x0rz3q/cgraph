@@ -1,4 +1,4 @@
-#include "cgraph.h"
+#include "graph.h"
 #include <stdlib.h>
 
 Graph *init_graph(GraphWeight weight, GraphDirection direction, unsigned int capacity) {
