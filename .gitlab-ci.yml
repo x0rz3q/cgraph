@@ -2,7 +2,7 @@ image: gcc
 
 before_script:
   - apt-get update -y
-  - apt-get -y install cmake googletest
+  - apt-get -y install cmake googletest gtest
 
 stages:
   - build
