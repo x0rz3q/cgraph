@@ -1,3 +1,7 @@
+/**
+ * Written by J.M. Thiessen (x0rz3q)
+ * License: MIT
+ */
 #ifndef CGRAPH_LIBRARY_GRAPH_H
 #define CGRAPH_LIBRARY_GRAPH_H
 

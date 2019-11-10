@@ -1,3 +1,7 @@
+/**
+ * Written by J.M. Thiessen (x0rz3q)
+ * License: MIT
+ */
 #include "queue.h"
 #include <stdlib.h>
 

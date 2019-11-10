@@ -1,3 +1,7 @@
+/**
+ * Written by J.M. Thiessen (x0rz3q)
+ * License: MIT
+ */
 #include "graph.h"
 #include <stdlib.h>
 

@@ -1,7 +1,7 @@
-//
-// Created by xoryo on 11/9/19.
-//
-
+/**
+ * Written by J.M. Thiessen (x0rz3q)
+ * License: MIT
+ */
 #ifndef CGRAPH_LIBRARY_QUEUE_H
 #define CGRAPH_LIBRARY_QUEUE_H
 
