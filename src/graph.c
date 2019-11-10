@@ -36,13 +36,11 @@ int remove_edge(Graph *graph, unsigned int from, unsigned int to) {
 	return add_weighted_edge(graph, from, to, 0);
 }
 
-int destroy_graph(Graph *graph) {
+void destroy_graph(Graph *graph) {
 	for (unsigned int i = 0; i < graph->capacity; i++) {
 		free(graph->adjacent[i]);
 	}
 
 	free(graph->adjacent);
 	free(graph);
-
-	return GRAPH_SUCCESS;
 }

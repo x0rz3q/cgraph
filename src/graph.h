@@ -68,11 +68,10 @@ int add_weighted_edge(Graph *graph, unsigned int from, unsigned int to, int weig
 int remove_edge(Graph *graph, unsigned int from, unsigned int to);
 
 /**
- * Destroy and free the graph.
- * @param graph The graph.
- * @return GRAPH_SUCCESS if graph got destroyed successfully.
+ * Destroys the graph and frees the memory.
+ * @param graph The graph to be destroyed.
  */
-int destroy_graph(Graph *graph);
+void destroy_graph(Graph *graph);
 
 #ifdef __cplusplus
 }
