@@ -77,7 +77,7 @@ TEST(GraphTest, RemoveEdgeFromUndirectedGraph) {
 TEST(GraphTest, DestroyGraph) {
     Graph *graph = init_graph(UNWEIGHTED, UNDIRECTED, 50);
 
-    EXPECT_EQ(destroy_graph(graph), GRAPH_SUCCESS);
+    destroy_graph(graph);
 }
 
 /**
