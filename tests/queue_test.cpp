@@ -62,3 +62,11 @@ TEST(QueueTest, QueuePopEmpty) {
 
     EXPECT_EQ(queue_empty(queue), QUEUE_EMPTY);
 }
+
+/**
+ * Tests destroying the graph.
+ */
+TEST(QueueTest, QueueDestroy) {
+    Queue *queue = init_queue(100);
+    destroy_queue(queue);
+}

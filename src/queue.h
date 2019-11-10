@@ -57,6 +57,12 @@ int queue_push(Queue *queue, int element);
  */
 int queue_pop(Queue *queue, int *result);
 
+/**
+ * Destroys the queue and frees the memory.
+ * @param queue The queue to be destroyed.
+ */
+void destroy_queue(Queue *queue);
+
 #ifdef __cplusplus
 }
 #endif

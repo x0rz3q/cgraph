@@ -39,3 +39,8 @@ int queue_pop(Queue *queue, int *result) {
 
 	return QUEUE_SUCCESS;
 }
+
+void destroy_queue(Queue *queue) {
+	free(queue->elements);
+	free(queue);
+}
